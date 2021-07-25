@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "lake",
+      "price": 50,
+      "quantity": 4,
+      "stockInHand": 2,
+      "userid": 1
+    },
+    {
+      "id": 2,
+      "productName": "cake",
+      "price": 50,
+      "quantity": 4,
+      "stockInHand": 2,
+      "userid": 1
+    },
+    {
+      "id": 3,
+      "productName": "applee",
+      "price": 50,
+      "quantity": 4,
+      "stockInHand": 2,
+      "userid": 3
+    },
+    {
+      "id": 4,
+      "productName": "gauvae",
+      "price": 50,
+      "quantity": 4,
+      "stockInHand": 2,
+      "userid": 3
+    }
+  ]
+}
