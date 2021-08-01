@@ -1,0 +1,4 @@
+#Sun Aug 01 18:14:11 IST 2021
+base.0=D\:\\prudhvi\\Projects\\Flutter Projects\\JudoStore\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

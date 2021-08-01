@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:july_18_flutter/repository/api-repository.dart';
-import 'package:july_18_flutter/storage/data-preferences.dart';
-import 'package:july_18_flutter/ui/home/home.dart';
+import 'package:judostore/repository/api-repository.dart';
+import 'package:judostore/storage/data-preferences.dart';
+import 'package:judostore/ui/home/home.dart';
 
 class RegisterController extends GetxController {
   final apiRepository = Get.find<ApiRepository>();
