@@ -3,6 +3,7 @@ import 'package:get_storage/get_storage.dart';
 
 class DataPreferences extends GetxController {
   final String kUserKey = "userID";
+  final String kIpAddressKey = "ipAddress";
 
   savePreference(String key, dynamic value) {
     GetStorage().write(key, value);

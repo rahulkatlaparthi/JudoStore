@@ -22,6 +22,9 @@ void showProgressDialog({String? message}) {
 }
 
 void showAlertDialog({required String message}) {
+  if (Get.isDialogOpen == true) {
+    return;
+  }
   Get.dialog(
     Dialog(
       backgroundColor: Colors.white,
@@ -42,6 +45,18 @@ void showAlertDialog({required String message}) {
           ],
         ),
       ),
+    ),
+  );
+}
+
+void showMyDialog({required Widget view}) {
+  if (Get.isDialogOpen == true) {
+    return;
+  }
+  Get.dialog(
+    Dialog(
+      backgroundColor: Colors.white,
+      child: Padding(padding: const EdgeInsets.all(16.0), child: view),
     ),
   );
 }

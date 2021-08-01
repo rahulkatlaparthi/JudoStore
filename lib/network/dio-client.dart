@@ -1,11 +1,14 @@
 import 'package:dio/dio.dart' as dio;
 import 'package:get/get.dart';
-import 'package:july_18_flutter/models/actual-response.dart';
-import 'package:july_18_flutter/utils/constants.dart';
-import 'package:july_18_flutter/utils/ui-helper.dart';
+import 'package:judostore/models/actual-response.dart';
+import 'package:judostore/storage/data-preferences.dart';
+import 'package:judostore/utils/constants.dart';
+import 'package:judostore/utils/dio-utils.dart';
+import 'package:judostore/utils/ui-helper.dart';
 
 class DioClient extends GetxController {
-  final String kBaseUrl = "http://192.168.0.104:9090";
+
+  final dataPreference = Get.find<DataPreferences>();
 
   Future<T?> makeNetworkCall<T>(
       {required String endPoint,
@@ -15,7 +18,7 @@ class DioClient extends GetxController {
       required Function parse}) async {
     try {
       showProgressDialog();
-      String path = kBaseUrl + endPoint;
+      String path = getBaseUrl(dataPreference.readPreference(dataPreference.kIpAddressKey)) + endPoint;
       print('Url $path');
       print('Method $method');
       print('Payload $data');
@@ -25,8 +28,8 @@ class DioClient extends GetxController {
           headers: headers,
           data: data,
           receiveDataWhenStatusError: true,
-          connectTimeout: 30 * 1000,
-          receiveTimeout: 30 * 1000));
+          connectTimeout: 60 * 1000,
+          receiveTimeout: 60 * 1000));
       print("Url : ${response.realUri}");
       print("Response : $response");
       hideProgressDialog();
